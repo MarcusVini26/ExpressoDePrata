@@ -13,15 +13,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preload" as="style" href="styleB.css">
     <link rel="stylesheet" href="styleB.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#datepicker").datepicker();
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
 
 </head>
@@ -41,12 +33,8 @@
         <ul class="menu">
             <!-- Menu -->
             <li class="menu__item" data-sub="inicio"><a href="index.html">Inicio</a></li>
-            <li class="menu__item" data-sub="passagem"><a
-                    href="https://vendas.expressodeprata.com.br/cgi-bin/br5.cgi">Passagem</a></li>
-            <li class="menu__item" data-sub="tarifa"><a href="http://www.expressodeprata.com.br/tabela_tarifas2.pdf"
-                    target="_blank">Tarifa</a></li>
+            <li class="menu__item" data-sub="passagem"><a href="passagem.html">Passagem</a></li>
             <li class="menu__item" data-sub="fretamento"><a href="fretamento.html">Fretamento</a></li>
-            <li class="menu__item" data-sub="carga"><a href="http://www.prataexpress.com.br/">Carga</a></li>
             <li class="menu__item" data-sub="contato"><a href="mailto:faleconosco@expressodeprata.com.br">Contato</a>
             </li>
             <li class="menu__item" data-sub="sobre"><a href="sobre.html">Sobre</a>
@@ -200,12 +188,14 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Origem" aria-label="Origem">
-                            <span class="input-group-text"><img src="./arrow.svg" alt="" style="height: 1em;"></span>
-                            <input type="text" class="form-control" placeholder="Destino" aria-label="Destino">
+                        
+                            <input type="text" class="form-control" placeholder="Origem" aria-label="Origem" style="margin:0 .5em">
+                            <input type="text" class="form-control" placeholder="Destino" aria-label="Destino" style="margin:0 .5em">
+                        
                         </div>
-                        <p>Date: <input type="text" id="datepicker"></p>
-                        <button type="button" class="btn btn-warning">Pesquisar</button>
+                        <p>Ida: <input required type="date" id="dataIda" >  Volta: <input required type="date" id="dataVolta" >       <button type="button" class="btn btn-warning">Pesquisar</button></P>
+						
+                        
                     </div>
                 </div>
 
