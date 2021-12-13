@@ -9,8 +9,19 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preload" as="style" href="styleB.css">
     <link rel="stylesheet" href="styleB.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
 
 
 </head>
@@ -21,8 +32,8 @@
     <div class="top">
         <img src="images/tp1.jpg">
         <img src="images/tp2.jpg">
-		<div>
-          <h4><a href="login.html" id="acessar">Acessar sua conta</a></h4>
+        <div>
+            <h4><a href="login.html" id="acessar">Acessar sua conta</a></h4>
         </div>
     </div>
     <!-- HEADER -->
@@ -30,8 +41,10 @@
         <ul class="menu">
             <!-- Menu -->
             <li class="menu__item" data-sub="inicio"><a href="index.html">Inicio</a></li>
-            <li class="menu__item" data-sub="passagem"><a href="https://vendas.expressodeprata.com.br/cgi-bin/br5.cgi">Passagem</a></li>
-            <li class="menu__item" data-sub="tarifa"><a href="http://www.expressodeprata.com.br/tabela_tarifas2.pdf" target="_blank">Tarifa</a></li>
+            <li class="menu__item" data-sub="passagem"><a
+                    href="https://vendas.expressodeprata.com.br/cgi-bin/br5.cgi">Passagem</a></li>
+            <li class="menu__item" data-sub="tarifa"><a href="http://www.expressodeprata.com.br/tabela_tarifas2.pdf"
+                    target="_blank">Tarifa</a></li>
             <li class="menu__item" data-sub="fretamento"><a href="fretamento.html">Fretamento</a></li>
             <li class="menu__item" data-sub="carga"><a href="http://www.prataexpress.com.br/">Carga</a></li>
             <li class="menu__item" data-sub="contato"><a href="mailto:faleconosco@expressodeprata.com.br">Contato</a>
@@ -157,122 +170,160 @@
     </header>
 
     <!-- FIM DO HEADER -->
-	
-	 <body>
-		
-		<!-- LISTA DE EMBARQUE -->
-		<div class="Teste">
-		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Embarque
-		  </button>
 
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="#">São Paulo - Jabaquara - SP</a>
-				<a class="dropdown-item" href="#">São Paulo - Tiête - SP</a>
-				<a class="dropdown-item" href="#">Campinas- SP</a>
-				<a class="dropdown-item" href="#">Taubaté - SP</a>
-				<a class="dropdown-item" href="#">Campos do Jordão - SP</a>
-				<a class="dropdown-item" href="#">São José dos Campos - SP</a>
-				<a class="dropdown-item" href="#">Aparecida - SP</a>
-				<a class="dropdown-item" href="#">Bauru - SP</a>
-			</div>
-		</div>
+    <body>
 
-         <div class="ui-section-pricing__layout ui-layout-grid ui-layout-grid-3">
+        <!-- LISTA DE EMBARQUE -->
+        <div class="Teste">
+            <form action="">
+
+                <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Embarque
+            </button> -->
+                <div class="card" style="margin: 0 10em">
+                    <div class="card-body">
+                        <div class="content d-flex">
+                            <div class="form-check m-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" checked>
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Somente ida
+                                </label>
+                            </div>
+                            <div class="form-check m-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Ida e volta
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Origem" aria-label="Origem">
+                            <span class="input-group-text"><img src="./arrow.svg" alt="" style="height: 1em;"></span>
+                            <input type="text" class="form-control" placeholder="Destino" aria-label="Destino">
+                        </div>
+                        <p>Date: <input type="text" id="datepicker"></p>
+                        <button type="button" class="btn btn-warning">Pesquisar</button>
+                    </div>
+                </div>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">São Paulo - Jabaquara - SP</a>
+                    <a class="dropdown-item" href="#">São Paulo - Tiête - SP</a>
+                    <a class="dropdown-item" href="#">Campinas- SP</a>
+                    <a class="dropdown-item" href="#">Taubaté - SP</a>
+                    <a class="dropdown-item" href="#">Campos do Jordão - SP</a>
+                    <a class="dropdown-item" href="#">São José dos Campos - SP</a>
+                    <a class="dropdown-item" href="#">Aparecida - SP</a>
+                    <a class="dropdown-item" href="#">Bauru - SP</a>
+                </div>
+        </div>
+
+        <div class="ui-section-pricing__layout ui-layout-grid ui-layout-grid-3">
             <div class="ui-component-card ui-component-card--pricing">
-              <span><strong>Aparecida - SP</strong></span>
-              
-              <div class="ui-component-card--pricing-price">
-                <span>$ 100</span>
-                <span>/</span>
-                <span>Somente Ida</span>
-              </div>
-              <span><small>Saída de São Paulo - SP</small></span>
-              <!-- Beneficios -->
-              <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
-                <li class="ui-component-list--item ui-component-list--item-check">Classe VIP</li>
-                <li class="ui-component-list--item ui-component-list--item-check">Semi leito</li>
-                <li class="ui-component-list--item ui-component-list--item-check">Wi-fi</li>
-				<li class="ui-component-list--item ui-component-list--item-check">TV</li>
-              </ul>
-              
-              <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary" role="link" aria-label="#">Comprar</a>
+                <span><strong>Aparecida - SP</strong></span>
+
+                <div class="ui-component-card--pricing-price">
+                    <span>$ 100</span>
+                    <span>/</span>
+                    <span>Somente Ida</span>
+                </div>
+                <span><small>Saída de São Paulo - SP</small></span>
+                <!-- Beneficios -->
+                <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
+                    <li class="ui-component-list--item ui-component-list--item-check">Classe VIP</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">Semi leito</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">Wi-fi</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">TV</li>
+                </ul>
+
+                <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary"
+                    role="link" aria-label="#">Comprar</a>
             </div>
             <div class="ui-component-card ui-component-card--pricing">
-              <span><strong>Rio de Janeiro - RJ</strong></span>
-              
-              <div class="ui-component-card--pricing-price">
-                <span>$ 150</span>
-                <span>/</span>
-                <span>Somente Ida</span>
-              </div>
-              <span><small>Saída de São Paulo - SP</small></span>
-             
-              <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
-                <li class="ui-component-list--item ui-component-list--item-cross">Classe VIP</li>
-                <li class="ui-component-list--item ui-component-list--item-cross">Semi leito</li>
-                <li class="ui-component-list--item ui-component-list--item-check">Wi-fi</li>
-				<li class="ui-component-list--item ui-component-list--item-check">TV</li>
-              </ul>
-              <!-- CTA -->
-              <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary" role="link" aria-label="#">Comprar</a>
+                <span><strong>Rio de Janeiro - RJ</strong></span>
+
+                <div class="ui-component-card--pricing-price">
+                    <span>$ 150</span>
+                    <span>/</span>
+                    <span>Somente Ida</span>
+                </div>
+                <span><small>Saída de São Paulo - SP</small></span>
+
+                <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
+                    <li class="ui-component-list--item ui-component-list--item-cross">Classe VIP</li>
+                    <li class="ui-component-list--item ui-component-list--item-cross">Semi leito</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">Wi-fi</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">TV</li>
+                </ul>
+                <!-- CTA -->
+                <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary"
+                    role="link" aria-label="#">Comprar</a>
             </div>
             <div class="ui-component-card ui-component-card--pricing">
-              <span><strong>Rio de Janeiro - RJ</strong></span>
-              
-              <div class="ui-component-card--pricing-price">
-                <span>$ 250</span>
-                <span>/</span>
-                <span>Somente Ida</span>
-              </div>
-              <span><small>Belo Horizonte - MG</small></span>
-             
-              <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
-                <li class="ui-component-list--item ui-component-list--item-cross">Classe VIP</li>
-                <li class="ui-component-list--item ui-component-list--item-cross">Semi leito</li>
-                <li class="ui-component-list--item ui-component-list--item-check">Wi-fi</li>
-				<li class="ui-component-list--item ui-component-list--item-check">TV</li>
-              </ul>
-              <!-- CTA -->
-              <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary" role="link" aria-label="#">Comprar</a>
-            </div>
-             
-            
-            <br/>
-      <br/>
-      <br/>
-      <br/>
-    
+                <span><strong>Rio de Janeiro - RJ</strong></span>
 
-        
-          </div>
-          <!-- NOTE -->
-   
+                <div class="ui-component-card--pricing-price">
+                    <span>$ 250</span>
+                    <span>/</span>
+                    <span>Somente Ida</span>
+                </div>
+                <span><small>Belo Horizonte - MG</small></span>
+
+                <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
+                    <li class="ui-component-list--item ui-component-list--item-cross">Classe VIP</li>
+                    <li class="ui-component-list--item ui-component-list--item-cross">Semi leito</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">Wi-fi</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">TV</li>
+                </ul>
+                <!-- CTA -->
+                <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary"
+                    role="link" aria-label="#">Comprar</a>
+            </div>
+
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+
+        </div>
+        <!-- NOTE -->
+
         <main role="main">
 
-             <!-- IMAGEM das logos das redes sociais-->
+            <!-- IMAGEM das logos das redes sociais-->
             <div class="ui-layout-container">
-              <div class="ui-section-customer__layout ui-layout-flex">
-                <a href="https://www.facebook.com/expressodeprata.com.br/" target="_blank"><img src="images/fc.png" alt="#" class="ui-section-customer--logo"  img-responsive img-thumbnail"></a>
-                <a href="https://www.instagram.com/expressodeprata/?hl=pt-br" target="_blank"><img src="images/insta.png" alt="#" class="ui-section-customer--logo"  img-responsive img-thumbnail"></a>
-              </div>
+                <div class="ui-section-customer__layout ui-layout-flex">
+                    <a href="https://www.facebook.com/expressodeprata.com.br/" target="_blank"><img src="images/fc.png"
+                            alt="#" class="ui-section-customer--logo" img-responsive img-thumbnail"></a>
+                    <a href="https://www.instagram.com/expressodeprata/?hl=pt-br" target="_blank"><img
+                            src="images/insta.png" alt="#" class="ui-section-customer--logo" img-responsive
+                            img-thumbnail"></a>
+                </div>
             </div>
 
             <div class="footer-fretamento">
-            <div class="informacoes-footer">
-                <h5 id="cor-footer">
-                <a href="mapadosite.html">Mapa do Site</a>
-                </h5>
-                <h5 id="cor-footer">
-                Expresso de Prata - CNPJ: 45.007.937/0001-27 - SAC: (14) 2109-9000
-                </h5>
-                <h5 id="cor-footer">
-                <a href="mailto:faleconosco@expressodeprata.com.br">faleconosco@expressodeprata.com.br</a>
-                </h5>
-                <h5 id="cor-footer">
-                Rua Irmã Arminda, 8-88 – Jardim Brasil – Bauru (SP)
-                </h5>
-            </div>
+                <div class="informacoes-footer">
+                    <h5 id="cor-footer">
+                        <a href="mapadosite.html">Mapa do Site</a>
+                    </h5>
+                    <h5 id="cor-footer">
+                        Expresso de Prata - CNPJ: 45.007.937/0001-27 - SAC: (14) 2109-9000
+                    </h5>
+                    <h5 id="cor-footer">
+                        <a href="mailto:faleconosco@expressodeprata.com.br">faleconosco@expressodeprata.com.br</a>
+                    </h5>
+                    <h5 id="cor-footer">
+                        Rua Irmã Arminda, 8-88 – Jardim Brasil – Bauru (SP)
+                    </h5>
+                </div>
+                </form>
+
 
         </main>
 
@@ -281,4 +332,10 @@
 
 
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
 </body>
