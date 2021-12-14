@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Expresso de Prata</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preload" as="style" href="styleB.css">
+    <link rel="stylesheet" href="styleB.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- IMAGEM DO TOPO -->
+    <div class="top">
+        <img src="images/tp1.jpg">
+        <img src="images/tp2.jpg">
+        <div>
+            <h4><a href="login.html" id="acessar">Acessar sua conta</a><a href="carrinho.html" id="acessar">Carinho</a></h4>
+			
+        </div>
+    </div>
+    <!-- HEADER -->
+    <header class="main-header">
+        <ul class="menu">
+            <!-- Menu -->
+            <li class="menu__item" data-sub="inicio"><a href="index.html">Inicio</a></li>
+            <li class="menu__item" data-sub="passagem"><a href="passagem.html">Passagem</a></li>
+            <li class="menu__item" data-sub="fretamento"><a href="fretamento.html">Fretamento</a></li>
+            <li class="menu__item" data-sub="contato"><a href="mailto:faleconosco@expressodeprata.com.br">Contato</a>
+            </li>
+            <li class="menu__item" data-sub="sobre"><a href="sobre.html">Sobre</a>
+            </li>
+        </ul>
+        <div class="dropdown-holder">
+            <div class="dropdown__arrow"></div>
+            <div class="dropdown__bg">
+                <div class="dropdown__bg-bottom"></div>
+            </div>
+
+
+            <!-- Menu Passagem -->
+            <div class="dropdown__wrap">
+                <div class="dropdown-menu" id="product" data-sub="passagem">
+                    <div class="dropdown-menu__content">
+                        <div class="top-section">
+                            <div class="col-2">
+                                <ul>
+                                    <li><a href="">
+                                            <h3>Passagens Online</h3>
+                                            <p>Aqui você encontra a passagem que você precisa, sem sair de casa!</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom-section"></div>
+                    </div>
+                </div>
+
+
+                <!-- Menu Tarifa -->
+                <div class="dropdown-menu" id="product" data-sub="tarifa">
+                    <div class="dropdown-menu__content">
+                        <div class="top-section">
+                            <div class="col-2">
+                                <ul>
+                                    <li><a href="">
+                                            <h3>Tarifas do Transporte</h3>
+                                            <p>Veja a evolução das revisões ou reajustes realizados nos últimos cinco
+                                                anos</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom-section"></div>
+                    </div>
+                </div>
+
+
+                <!-- Menu Fretamento -->
+                <div class="dropdown-menu" id="product" data-sub="fretamento">
+                    <div class="dropdown-menu__content">
+                        <div class="top-section">
+                            <div class="col-2">
+                                <ul>
+                                    <li><a href="">
+                                            <h3>Fretamento</h3>
+                                            <p>Para você que não abre mão do melhor fretamento</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom-section"></div>
+                    </div>
+                </div>
+
+
+                <!-- Menu Fretamento-->
+                <div class="dropdown-menu" id="product" data-sub="carga">
+                    <div class="dropdown-menu__content">
+                        <div class="top-section">
+                            <div class="col-2">
+                                <ul>
+                                    <li><a href="">
+                                            <h3>Transporte de Mercadorias</h3>
+                                            <p>Aqui você encontra a passagem que você precisa, sem sair de casa!</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom-section"></div>
+                    </div>
+                </div>
+
+                <!-- Menu Contato -->
+                <div class="dropdown-menu" id="product" data-sub="contato">
+                    <div class="dropdown-menu__content">
+                        <div class="top-section">
+                            <div class="col-2">
+                                <ul>
+                                    <li><a href="">
+                                            <h3>Entre em contato conosco!</h3>
+                                            <p>Ligue ( 14 ) 3234-1002</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom-section"></div>
+                    </div>
+                </div>
+
+                <!-- Menu Sobre-->
+                <div class="dropdown-menu" id="product" data-sub="sobre">
+                    <div class="dropdown-menu__content">
+                        <div class="top-section">
+                            <div class="col-2">
+                                <ul>
+                                    <li><a href="">
+                                            <h3>Conheça nossa empresa!</h3>
+                                            <p>80 anos de expresso de prata!</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom-section"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FIM DO HEADER -->
+
+    <body>
+
+        <!-- LISTA DE EMBARQUE -->
+        <div class="Teste">
+            <form action="">
+
+                <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Embarque
+            </button> -->
+                <div class="card" style="margin: 0 10em">
+                    <div class="card-body">
+                        <div class="content d-flex">
+                            <div class="form-check m-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" checked>
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Somente ida
+                                </label>
+                            </div>
+                            <div class="form-check m-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Ida e volta
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                        
+                            <input type="text" class="form-control" placeholder="Origem" aria-label="Origem" style="margin:0 .5em">
+                            <input type="text" class="form-control" placeholder="Destino" aria-label="Destino" style="margin:0 .5em">
+                        
+                        </div>
+                        <p>Ida: <input required type="date" id="dataIda" >  Volta: <input required type="date" id="dataVolta" >       <button type="button" class="btn btn-warning">Pesquisar</button></P>
+						
+                        
+                    </div>
+                </div>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">São Paulo - Jabaquara - SP</a>
+                    <a class="dropdown-item" href="#">São Paulo - Tiête - SP</a>
+                    <a class="dropdown-item" href="#">Campinas- SP</a>
+                    <a class="dropdown-item" href="#">Taubaté - SP</a>
+                    <a class="dropdown-item" href="#">Campos do Jordão - SP</a>
+                    <a class="dropdown-item" href="#">São José dos Campos - SP</a>
+                    <a class="dropdown-item" href="#">Aparecida - SP</a>
+                    <a class="dropdown-item" href="#">Bauru - SP</a>
+                </div>
+        </div>
+
+        <div class="ui-section-pricing__layout ui-layout-grid ui-layout-grid-3">
+            <div class="ui-component-card ui-component-card--pricing">
+                <span><strong>Aparecida - SP</strong></span>
+
+                <div class="ui-component-card--pricing-price">
+                    <span>$ 100</span>
+                    <span>/</span>
+                    <span>Somente Ida</span>
+                </div>
+                <span><small>Saída de São Paulo - SP</small></span>
+                <!-- Beneficios -->
+                <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
+                    <li class="ui-component-list--item ui-component-list--item-check">Classe VIP</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">Semi leito</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">Wi-fi</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">TV</li>
+                </ul>
+
+                <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary"
+                    role="link" aria-label="#">Comprar</a>
+            </div>
+            <div class="ui-component-card ui-component-card--pricing">
+                <span><strong>Rio de Janeiro - RJ</strong></span>
+
+                <div class="ui-component-card--pricing-price">
+                    <span>$ 150</span>
+                    <span>/</span>
+                    <span>Somente Ida</span>
+                </div>
+                <span><small>Saída de São Paulo - SP</small></span>
+
+                <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
+                    <li class="ui-component-list--item ui-component-list--item-cross">Classe VIP</li>
+                    <li class="ui-component-list--item ui-component-list--item-cross">Semi leito</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">Wi-fi</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">TV</li>
+                </ul>
+                <!-- CTA -->
+                <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary"
+                    role="link" aria-label="#">Comprar</a>
+            </div>
+            <div class="ui-component-card ui-component-card--pricing">
+                <span><strong>Rio de Janeiro - RJ</strong></span>
+
+                <div class="ui-component-card--pricing-price">
+                    <span>$ 250</span>
+                    <span>/</span>
+                    <span>Somente Ida</span>
+                </div>
+                <span><small>Belo Horizonte - MG</small></span>
+
+                <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
+                    <li class="ui-component-list--item ui-component-list--item-cross">Classe VIP</li>
+                    <li class="ui-component-list--item ui-component-list--item-cross">Semi leito</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">Wi-fi</li>
+                    <li class="ui-component-list--item ui-component-list--item-check">TV</li>
+                </ul>
+                <!-- CTA -->
+                <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary"
+                    role="link" aria-label="#">Comprar</a>
+            </div>
+
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+
+        </div>
+        <!-- NOTE -->
+
+        <main role="main">
+
+            <!-- IMAGEM das logos das redes sociais-->
+            <div class="ui-layout-container">
+                <div class="ui-section-customer__layout ui-layout-flex">
+                    <a href="https://www.facebook.com/expressodeprata.com.br/" target="_blank"><img src="images/fc.png"
+                            alt="#" class="ui-section-customer--logo" img-responsive img-thumbnail"></a>
+                    <a href="https://www.instagram.com/expressodeprata/?hl=pt-br" target="_blank"><img
+                            src="images/insta.png" alt="#" class="ui-section-customer--logo" img-responsive
+                            img-thumbnail"></a>
+                </div>
+            </div>
+
+            <div class="footer-fretamento">
+                <div class="informacoes-footer">
+                    <h5 id="cor-footer">
+                        <a href="mapadosite.html">Mapa do Site</a>
+                    </h5>
+                    <h5 id="cor-footer">
+                        Expresso de Prata - CNPJ: 45.007.937/0001-27 - SAC: (14) 2109-9000
+                    </h5>
+                    <h5 id="cor-footer">
+                        <a href="mailto:faleconosco@expressodeprata.com.br">faleconosco@expressodeprata.com.br</a>
+                    </h5>
+                    <h5 id="cor-footer">
+                        Rua Irmã Arminda, 8-88 – Jardim Brasil – Bauru (SP)
+                    </h5>
+                </div>
+                </form>
+
+
+        </main>
+
+    </body>
+
+
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
